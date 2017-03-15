@@ -10,4 +10,5 @@ for i in $(find src/ | grep .java); do
 	javac -cp gson.jar:src/ $i
 done
 
-find src/ | grep .class | zip -@ openmcauth.jar
+cd src
+find . | grep .class | zip -@ ../openmcauth.jar
